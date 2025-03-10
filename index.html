@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BitByBit Labs</title>
-    <!-- Add Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Bit By Bit Labs</title>
+    <link rel="icon" type="image/png" href="bitbybit.webp">
     <style>
         /* Reset and base styles */
         * {
@@ -15,201 +13,270 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: white;
-        }
-        
-        a {
-            color: #0000EE; /* Traditional browser link blue */
-            text-decoration: underline;
-        }
-        
-        a:visited {
-            color: #551A8B; /* Traditional visited link color */
-        }
-        
-        /* Container */
-        .container {
-            width: 90%;
-            max-width: 1000px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #222;
+            line-height: 1.5;
+            padding: 80px 40px 40px 40px;
+            /* Increased top padding from 40px to 80px */
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 15px;
         }
-        
-        /* Header */
-        header {
-            padding: 20px 0;
-            border-bottom: 1px solid #ddd;
+
+        /* Layout */
+        .container {
+            display: flex;
+            gap: 80px;
+            margin-top: 40px;
+            /* Added additional top margin to the container */
         }
-        
-        nav {
+
+        /* Sidebar */
+        .sidebar {
+            width: 150px;
+            flex-shrink: 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .nav-item {
+            text-decoration: none;
+            color: #222;
+        }
+
+        .nav-title {
+            font-weight: bold;
+        }
+
+        .nav-subtitle {
+            color: #0000EE;
+        }
+
+        /* Main content */
+        .main {
+            flex-grow: 1;
+            max-width: 800px;
+        }
+
+        .hero {
+            margin-bottom: 60px;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: bold;
+            line-height: 1.1;
+            margin-bottom: 40px;
+        }
+
+        .hero-text {
+            font-size: 18px;
+            color: #444;
+            margin-bottom: 30px;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 60px 0;
+        }
+
+        .section-number {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .section-text {
+            font-size: 18px;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .demo-link {
+            color: #0000EE;
+            text-decoration: none;
+            border-bottom: 1px solid #0000EE;
+        }
+
+        /* Visualization card */
+        .visualization-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .waveform {
+            width: 100%;
+            height: 200px;
+            background-image: url('recast-studio.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .waveform-label {
+            position: absolute;
+            font-size: 12px;
+            color: #888;
+        }
+
+        .waveform-label.human {
+            top: 0;
+            left: 0;
+        }
+
+        .waveform-label.sesame {
+            bottom: 0;
+            left: 0;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0 30px;
+        }
+
+        .timeline-mark {
+            width: 1px;
+            height: 10px;
+            background-color: #ddd;
+        }
+
+        .card-footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        
-        .nav-links a {
-            margin-left: 20px;
-        }
-        
-        /* Sections */
-        section {
-            padding: 40px 0;
-        }
-        
-        h1, h2, h3 {
-            margin-bottom: 15px;
-        }
-        h2{
-            font-size: 32px;
-        }
-        h3{
-            font-size: 24px;
-        }
-        
-        p {
-            margin-bottom: 15px;
-            font-size: 22px;
-        }
-        
-        .section-title {
-            margin-bottom: 20px;
-        }
-        
-        /* Button */
-        .btn {
-            display: inline-block;
-            background-color: black;
-            color: white;
-            padding: 10px 20px;
+
+        .card-link {
             text-decoration: none;
-            margin-top: 10px;
+            color: #222;
+            font-weight: 500;
         }
-        
-        /* Footer */
-        footer {
-            padding: 20px 0;
-            border-top: 1px solid #ddd;
-            text-align: center;
-            margin-top: 40px;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            .nav-links {
-                margin-top: 10px;
-            }
-        }
-        
-        /* Hero section - updated to match reference image */
-        .hero {
-            padding: 120px 0 60px;
-        }
-        
-        .hero h1 {
-            font-size: 54px;
-            line-height: 1.2;
-            margin-bottom: 40px;
-            max-width: 90%;
-            font-weight: 600;
-        }
-        
-        .hero p {
-            font-size: 28px;
-            margin-bottom: 20px;
-            line-height: 1.3;
-        }
-        
-        .hero p:last-of-type {
-            margin-bottom: 60px;
-        }
-        
-        .hero .btn {
-            font-size: 18px;
-            padding: 12px 24px;
-            border-radius: 4px;
-        }
-        
-        /* Responsive adjustments for hero */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 42px;
-            }
-            
-            .hero p {
-                font-size: 22px;
-            }
+
+        .arrow-icon {
+            font-size: 20px;
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">BitbyBit Labs</div>
-                <div class="nav-links">
-                    <a href="#products">Products</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-                </div>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo"><img src="/bitbybit.webp" alt="Bit By Bit Labs Logo"
+                    style="width: 100%; height: 100%; object-fit: contain;"></div>
+            <nav class="nav">
+                <a href="#" class="nav-item">
+                    <div class="nav-title">Bit By Bit Labs</div>
+                    <div class="nav-subtitle"><a href="#products">Products</a></div>
+                    <div class="nav-subtitle"><a href="#about">About</a></div>
+                </a>
+                <!-- <a href="#" class="nav-item">
+                    <div class="nav-subtitle">Demo</div>
+                </a> -->
             </nav>
         </div>
-    </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>We build Gen AI products <span style="color: #0000EE; font-size: 40px;"> Bit by Bit...</span></h1>
+        <!-- Main content -->
+        <div class="main">
+            <!-- Hero section -->
+            <section class="hero">
+                <h1 class="hero-title">We build <br>world class products<br>bit by bit...</h1>
+                <!-- <p class="hero-text">
+                    We believe in a future where computers are lifelike. They will see, hear, and
+                    collaborate with us the way we're used to. A natural human voice is key to
+                    unlocking this future.
+                </p>
+                <p class="hero-text">
+                    To start, we have two goals.
+                </p> -->
+            </section>
+
+            <div class="divider"></div>
+
+           
+            <section id="products">
+                <h2 style="font-size: 36px; font-weight: bold; margin-bottom: 40px;">What we are building</h2>
+                <div class="section-number">01</div>
+                <h2 class="section-title">Recast Studio: AI-Powered Video Editor for Marketing Teams</h2>
+                <p class="section-text">
+                    Recast Studio is an AI-powered video editor that helps marketing teams with no video editing skills
+                    to edit and repurpose their video and audio content.
+                </p>
+                <p class="section-text">
+                    Check out <a href="https://recast.studio" class="demo-link">here</a>.
+                </p>
+
+                <div class="section-number">02</div>
+                <h2 class="section-title">Podcast Generator: Turn your Text into Lifelike Audio Discussions</h2>
+                <p class="section-text">
+                    Podcast Generator helps you convert web URLs, PDFs, and text into engaging audio conversations using
+                    AI.
+                </p>
+                <p class="section-text">
+                    Check out <a href="https://podcastmaker.ai" class="demo-link">here</a>.
+                </p>
+
+                <div class="section-number">3</div>
+                <h2 class="section-title">Music Visualizer(coming soon): Turn your music into a killer video</h2>
+                <p class="section-text">
+                    Music Visualizer makes it fast and easy to create custom music visualizers.
+                </p>
+                <!-- <p class="section-text">
+                    Check out <a href="https://podcastmaker.ai" class="demo-link">here</a>.
+                </p> -->
+
+            </section>
+
+            <div class="divider"></div>
+
+            <section id="about">
+                <h2 style="font-size: 36px; font-weight: bold; margin-bottom: 40px;">About Us</h2>
+                <p class="section-text">We are a tiny but effective team of makers based in Indore, India.</p>
+                <p class="section-text">Our philosophy is simple: build high-quality, profitable software that solves real problems. We focus
+                    on AI SaaS solutions that can be effectively managed by small teams.</p>
+                <p class="section-text">The below GIF aptly represents our work style. 👇</p>
+
+                <img src="/fire.gif" alt="BitbyBit Labs" style="width: 50%; height: auto; margin-top: 20px;">
+            </section>
+            <div class="divider"></div>
+
+            <section class="contact">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-text">Interested in our products or want to learn more about what we do?</p>
+                <p class="section-text">Email: <a href="mailto:hi@recast.studio">hi@recast.studio</a></p>
+
+            </section>
+            <footer>
+
+                <p style="text-align: center; font-size: 10px;">&copy; 2025 Bit By Bit Labs Pvt Ltd. All rights
+                    reserved.</p>
+
+            </footer>
         </div>
-    </section>
 
-    <section id="products">
-        <div class="container">
-            <h2 class="section-title">What we are building</h2>
-            <h3><a href="https://recast.studio" style="color: #0000EE; text-decoration: none;">Recast Studio - </a>AI-Powered Video Editor for Marketing Teams</h3>
-            <p>Recast Studio is an AI-powered video editor that helps marketing teams with no video editing skills to edit and repurpose their video and audio content.</p>
-            
-            <h3><a href="https://podcastmaker.ai" style="text-decoration: none; color: #0000EE;">Podcast Generator - </a>Turn your Text into Lifelike Audio Discussions</h3>
-            <p>Podcast Generator helps you convert web URLs, PDFs, and text into engaging audio conversations using AI.</p>
-            
-            <h3><span style="text-decoration: none; color: #0000EE;"></a>Music Visualizer(coming soon) - </span>Turn your music into a killer video</h3>
-            <p>Music Visualizer makes it fast and easy to create custom music visualizers.</p>
-            
-            <h3>Many more products coming soon... 🚀</h3>
-        </div>
-    </section>
-
-
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Us</h2>
-            <p>We are a tiny but effective team of makers based in Indore, India.</p>
-            <p>Our philosophy is simple: build high-quality, profitable software that solves real problems. We focus on AI SaaS solutions that can be effectively managed by small teams.</p>
-            <p>The below GIF aptly represents our work style. 👇</p>
-        <img src="/fire.gif" alt="BitbyBit Labs" style="width: 50%; height: auto;">
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <p>Interested in our products or want to learn more about what we do?</p>
-            <p>Email: <a href="mailto:hi@recast.studio">hi@recast.studio</a></p>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Bit By Bit Labs Pvt Ltd. All rights reserved.</p>
-        </div>
-    </footer>
+    </div>
 </body>
+
 </html>
