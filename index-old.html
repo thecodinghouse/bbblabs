@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitByBit Labs</title>
+    <!-- Add Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: white;
+        }
+        
+        a {
+            color: #0000EE; /* Traditional browser link blue */
+            text-decoration: underline;
+        }
+        
+        a:visited {
+            color: #551A8B; /* Traditional visited link color */
+        }
+        
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .nav-links a {
+            margin-left: 20px;
+        }
+        
+        /* Sections */
+        section {
+            padding: 40px 0;
+        }
+        
+        h1, h2, h3 {
+            margin-bottom: 15px;
+        }
+        h2{
+            font-size: 32px;
+        }
+        h3{
+            font-size: 24px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        
+        .section-title {
+            margin-bottom: 20px;
+        }
+        
+        /* Button */
+        .btn {
+            display: inline-block;
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 20px 0;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .nav-links {
+                margin-top: 10px;
+            }
+        }
+        
+        /* Hero section - updated to match reference image */
+        .hero {
+            padding: 120px 0 60px;
+        }
+        
+        .hero h1 {
+            font-size: 54px;
+            line-height: 1.2;
+            margin-bottom: 40px;
+            max-width: 90%;
+            font-weight: 600;
+        }
+        
+        .hero p {
+            font-size: 28px;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .hero p:last-of-type {
+            margin-bottom: 60px;
+        }
+        
+        .hero .btn {
+            font-size: 18px;
+            padding: 12px 24px;
+            border-radius: 4px;
+        }
+        
+        /* Responsive adjustments for hero */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 42px;
+            }
+            
+            .hero p {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">BitbyBit Labs</div>
+                <div class="nav-links">
+                    <a href="#products">Products</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>We build Gen AI products <span style="color: #0000EE; font-size: 40px;"> bit by bit...</span></h1>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="container">
+            <h2 class="section-title">What we are building</h2>
+            <h3><a href="https://recast.studio" style="color: #0000EE; text-decoration: none;">Recast Studio - </a>AI-Powered Video Editor for Marketing Teams</h3>
+            <p>Recast Studio is an AI-powered video editor that helps marketing teams with no video editing skills to edit and repurpose their video and audio content.</p>
+            
+            <h3><a href="https://podcastmaker.ai" style="text-decoration: none; color: #0000EE;">Podcast Generator - </a>Turn your Text into Lifelike Audio Discussions</h3>
+            <p>Podcast Generator helps you convert web URLs, PDFs, and text into engaging audio conversations using AI.</p>
+            
+            <h3><span style="text-decoration: none; color: #0000EE;"></a>Music Visualizer(coming soon) - </span>Turn your music into a killer video</h3>
+            <p>Music Visualizer makes it fast and easy to create custom music visualizers.</p>
+            
+            <h3>Many more products coming soon... 🚀</h3>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <p>We are a tiny but effective team of makers based in Indore, India.</p>
+            <p>Our philosophy is simple: build high-quality, profitable software that solves real problems. We focus on AI SaaS solutions that can be effectively managed by small teams.</p>
+            <p>The below GIF aptly represents our work style. 👇</p>
+        <img src="/fire.gif" alt="BitbyBit Labs" style="width: 50%; height: auto;">
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p>Interested in our products or want to learn more about what we do?</p>
+            <p>Email: <a href="mailto:hi@recast.studio">hi@recast.studio</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bit By Bit Labs Pvt Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
